@@ -1,0 +1,15 @@
+.Rhistory
+.RData
+.RDataTmp*
+.Rproj.user/
+.Ruserdata
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Don’t upload huge raw data exports
+R/Data/*.csv
+Excel/Source/*.csv

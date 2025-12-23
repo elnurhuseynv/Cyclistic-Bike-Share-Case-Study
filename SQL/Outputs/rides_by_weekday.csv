@@ -1,0 +1,15 @@
+"user_type","dow_num","day_of_week","rides"
+Customer,0,Sunday,169941
+Customer,1,Monday,101356
+Customer,2,Tuesday,88495
+Customer,3,Wednesday,89601
+Customer,4,Thursday,101203
+Customer,5,Friday,120934
+Customer,6,Saturday,207760
+Subscriber,0,Sunday,256191
+Subscriber,1,Monday,458714
+Subscriber,2,Tuesday,496951
+Subscriber,3,Wednesday,494205
+Subscriber,4,Thursday,486837
+Subscriber,5,Friday,456890
+Subscriber,6,Saturday,287078

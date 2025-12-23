@@ -1,0 +1,112 @@
+---
+title: "Cyclistic Bike-Share Case Study (R Version)"
+author: "Elnur"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r loading packages}
+library(tidyverse)
+library(dplyr)
+library(lubridate)
+```
+---
+
+# 1. Business Task (Ask)
+
+**Business question:**  
+How do annual members and casual riders use Cyclistic bikes differently?
+
+**Objective:**  
+Identify behavioral differences to support marketing strategies aimed at converting casual riders into annual members.
+
+**Stakeholders:**  
+- Director of Marketing  
+- Marketing Analytics Team  
+- Cyclistic Executive Team
+
+---
+
+# 2. Data (Prepare)
+
+I used publicly available Divvy bike-share trip data from 2019 Q1–Q4. Click here [link](https://divvy-tripdata.s3.amazonaws.com/index.html)
+
+**Data characteristics:**
+
+* Anonymized trip-level data
+* No personally identifiable information (PII)
+* Contains system tests and outliers that require cleaning
+
+---
+
+# 3. Data Processing (Process)
+
+**Data cleaning steps performed in R:**
+
+* Standardized column names across files
+* Combined quarterly datasets into full-year 2019
+* Converted trip duration from seconds to minutes
+* Removed invalid rides (duration < 1 minute or > 1440 minutes)
+* Created time-based features (weekday, month, hour)
+
+---
+
+# 4. Analysis (Analyze)
+
+This section summarizes the key behavioral differences between Customer (casual riders) and Subscriber (annual members).
+
+### 4.1 Key metrics by rider type
+
+```{r summary-table, echo=FALSE}
+summary_table <- read_csv(file.path("Outputs/Summary_Table.csv"))
+summary_table
+```
+
+### 4.2 Main findings
+
+* **Casual riders** have longer ride durations on average (likely leisure use).
+* **Members** have shorter ride durations and significantly more rides (likely commuting / frequent utility trips).
+
+---
+
+# 5. Visualizations (Share)
+
+Below are the supporting charts created in R and saved to the Outputs folder.
+
+### 5.1 Ride duration
+
+```{r ride-duration, echo=FALSE, out.width="100%"}
+knitr::include_graphics(file.path("Outputs/Ride_Duration.png"))
+```
+
+### 5.2 Rides by weekday
+
+```{r rides-weekday, echo=FALSE, out.width="100%"}
+knitr::include_graphics(file.path("Outputs/Rides_By_Weekday.png"))
+```
+
+### 5.3 Rides by hour
+
+```{r rides-hour, echo=FALSE, out.width="100%"}
+knitr::include_graphics(file.path("Outputs/Rides_By_Hour.png"))
+```
+
+### 5.4 Rides by month
+
+```{r rides-month, echo=FALSE, out.width="100%"}
+knitr::include_graphics(file.path("Outputs/Rides_By_Month.png"))
+```
+
+---
+
+# 6. Recommendations (Act)
+
+**Based on the analysis:**
+
+1. **Weekend conversion campaigns:** Target casual riders on weekends with membership promotions emphasizing savings after multiple rides.
+
+2. **Station-based targeting:** Focus digital ads and on-site messaging at stations with the highest casual usage.
+
+3. **Commute messaging for frequent riders:** Promote membership benefits for riders who show repeated weekday usage patterns (e.g., morning/evening peaks).
+
+---

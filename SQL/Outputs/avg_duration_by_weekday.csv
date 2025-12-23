@@ -1,0 +1,15 @@
+"user_type","dow_num","day_of_week","avg_duration_min"
+Customer,0,Sunday,41.3294118743171650
+Customer,1,Monday,39.2976608850651828
+Customer,2,Tuesday,37.5716202421982410
+Customer,3,Wednesday,36.6787264279044505
+Customer,4,Thursday,37.3876433175564624
+Customer,5,Friday,38.3125827586396988
+Customer,6,Saturday,41.5456258022076755
+Subscriber,0,Sunday,14.2218292211670199
+Subscriber,1,Monday,12.6374910801356255
+Subscriber,2,Tuesday,12.5827652022030341
+Subscriber,3,Wednesday,12.6225461431322359
+Subscriber,4,Thursday,12.6411056472700308
+Subscriber,5,Friday,12.5385913823166772
+Subscriber,6,Saturday,14.4591963392063017
